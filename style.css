@@ -10,8 +10,10 @@ Tags: blue, orange, light, three-columns, left-sidebar, responsive-layout, edito
 
 
 /*general*/
+
 body{
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main{
@@ -66,6 +68,35 @@ header{
 }
 
 /*blog articles*/
+.list_style_none, .post-categories{
+    list-style: none;
+    
+}
+.post-categories li a{
+    color: #FFCE33;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.post-categories{
+    padding-left: 0;
+    padding-top: 20px;
+    margin: 0;
+    font-size: 14px;
+}
+.attachment-post-thumbnail{
+    width: 100%;
+    height: auto;
+}
+.article_title{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+}
+.article_author{
+    text-align: center;
+    color: #FFCE33;
+    margin: 0;
+}
 .titre_last_articles{
     text-align: left;
     padding-right: 20px;
@@ -74,12 +105,26 @@ header{
     margin: 35px 0;
 }
 
+.the_excerpt{
+    margin: 30px;
+}
+
+.en_savoir_plus{
+    color: #FFCE33;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+    display: block;
+    margin-right: 40px;
+
+}
 .derniers_articles{
-    width: 80%;
+    width: 100%;
     border: #CCCCCC 1px solid;
     list-style:none;
-    margin:20px 10px;
-    padding: 40px;
+    margin:10px 0 20px 0;
+    padding: 0 0 20px 0;
 }
 /* error 404 */
 
@@ -169,5 +214,5 @@ footer p{
     line-height: 10vh;
     width: 100vw;
     height: 10vh;
-    margin: 0;
+    margin: 10px 0 0 0;
 }
