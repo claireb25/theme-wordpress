@@ -21,23 +21,28 @@
             <a href="<?php get_the_author_meta('twitter'); ?>"><img class="logo" src="URL DE VOTRE IMAGE"/></a>
         </div>
         <div class="author-other-articles">
-            <h4 class="title-other-articles title-h4">ses autres articles</p>
-            <?php
-            // if(isset($_GET['author_name'])) : $curauth = get_userdatabylogin($author_name);
-            // else : $curauth = get_userdata(intval($author));
-            // endif;
-        
+            <h4 class="title-other-articles title-h4">ses autres articles</h4>
+            <ul class="ul-other-articles">
 
-            while (have_posts()) : the_post(); ?>
+            <?php          
+            $current_user = wp_get_current_user();                     
 
-            <li> <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
-    
-            <?php endwhile; wp_reset_query(); ?>
+            $args = array(
+            'author'        =>  $current_user->ID, 
+            'orderby'       =>  'post_date',
+            'order'         =>  'DESC',
+            'posts_per_page' => -1 // no limit
+            );
 
-        </div>
-    </div>
+            $query = new WP_Query( $args );
+
+
+            //var_dump($my_query);
+            if ( $query->have_posts()) : while ( $query->have_posts() ) : $query->the_post(); ?> 
+                <li class="other-articles-li"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+                <?php endwhile; 
+            endif; ?>
+            </ul>
 </div>
 </main>
-<?php 
-get_footer();
-?>
+<?php get_footer(); ?>

@@ -166,6 +166,9 @@ header{
 .links-author{
     text-align: center;
 }
+
+
+
 .logo{
     width: 30px;
 }
@@ -184,6 +187,14 @@ header{
     text-align: center;
 }
 
+.other-articles-li{
+    list-style: none;
+    font-size: 15px;
+}
+.other-articles-li a {
+    text-decoration: none;
+    color: #F7C219;
+}
 .the-article{
     margin: 30px;
 }
@@ -318,6 +329,16 @@ input[type="submit"]:hover{
 .description{
     margin-top: 20px;
 }
+
+.networks a{
+    text-decoration: none;
+}
+.fa-linkedin, .fa-github-square, .fa-twitter-square{
+    color: #F7C219;
+    width: 40px;
+}
+
+
 /* footer */ 
 
 footer p{

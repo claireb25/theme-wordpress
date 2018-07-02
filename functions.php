@@ -9,7 +9,7 @@ function my_post_queries( $query ) {
         if ( is_author() ) {
 
             // montrer tous les articles
-            $query->set( 'posts_per_page', -1 );
+            $query->set( 'posts_per_page',7 );
             $query->set( 'post_type', array( 'post' ) );
         }
 
@@ -34,3 +34,4 @@ function wpm_user_fields( $contactmethods ) {
     
 	return $contactmethods;
 }
+
