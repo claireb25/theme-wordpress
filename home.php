@@ -17,7 +17,7 @@ get_header();
             <li class="list_style_none">
                 <?php the_category(); ?>
                 <div class="derniers_articles">
-                    <?php the_post_thumbnail(); ?>
+                     <div class="thumbnail-perso-big" style="background-image : url('<?php  echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>');"></div>
                     <h4 class="article_title"><?php the_title();?></h4>
                     <p class="article_author">- <?php the_author();?> -</p>
                     <p class="the_excerpt"><?php echo  get_the_excerpt(); ?></p> 
