@@ -3,6 +3,7 @@
   <head <?php language_attributes(); ?>>
     <meta charset="<?php bloginfo('charset'); ?>">
     <title><?php the_title(); ?></title>
+    <base href="https://claireb.promo-17.codeur.online/blog/">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
     <?php wp_head(); ?>
   </head>

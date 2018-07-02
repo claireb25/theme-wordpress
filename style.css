@@ -291,6 +291,33 @@ input[type="submit"]:hover{
 .who-are-we{
     text-align: center;
 }
+
+/* one author*/
+
+#author-info{
+    margin-top: 50px;
+}
+
+.avatar-96{
+    width: 200px;
+    height: auto;
+}
+#author-avatar{
+    text-align: center;
+}
+.title-h2{
+    color: #F7C219;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.subpart-author{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.description{
+    margin-top: 20px;
+}
 /* footer */ 
 
 footer p{

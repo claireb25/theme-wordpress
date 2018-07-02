@@ -15,6 +15,22 @@ function my_post_queries( $query ) {
 
     }
 }
-add_action( 'pre_get_posts', 'my_post_queries' )
+add_action( 'pre_get_posts', 'my_post_queries' );
 
-?>
+add_filter('user_contactmethods','wpm_user_fields',10,1);
+
+function wpm_user_fields( $contactmethods ) {
+	// On ajoute le stack
+	$contactmethods['stack'] = 'Stack';
+
+	//On ajoute la devise
+    $contactmethods['devise'] = 'Devise';
+    
+    //on ajoute Github
+    $contactmethods['github'] = 'GitHub';
+
+    //on ajoute Linkedin
+    $contactmethods['linkedin'] = 'Linkedin';
+    
+	return $contactmethods;
+}
