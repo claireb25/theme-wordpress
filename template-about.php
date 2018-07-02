@@ -5,7 +5,10 @@
  */
 
 get_header();
-the_content();
-wp_list_authors();
+?>
+<div class="main-a-propos">
+<?php the_content();?>
 
-get_footer();
+<?php wp_list_authors(); ?>
+</div>
+<?php get_footer();?>
