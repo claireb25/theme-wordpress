@@ -268,7 +268,29 @@ input[type="submit"]:hover{
     color: #F7C219;
     font-weight: 400;
 }
+/* a propos */
+#grid-contributors{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contributor-link{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F7C219;
+}
+.single-item{
+    list-style: none;
+    margin: 20px;
+}
 
+.avatar{
+    border-radius: 50%;
+}
+
+.who-are-we{
+    text-align: center;
+}
 /* footer */ 
 
 footer p{
