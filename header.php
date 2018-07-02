@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head <?php language_attributes(); ?>>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="<?php bloginfo('charset'); ?>">
     <title><?php the_title(); ?></title>
     <base href="https://claireb.promo-17.codeur.online/blog/">
@@ -13,8 +14,8 @@
       <header>
         <h1><a><?php bloginfo('name'); ?></a></h1>
         <h2><?php bloginfo('description'); ?></h2>
-      
- <nav class="navbar navbar-expand-sm navbar-light border-menu" role="navigation">
+        <div class="border-menu">
+        <nav class="navbar navbar-expand-sm navbar-light" role="navigation">
               <div class="row">
               <!-- Brand and toggle get grouped for better mobile display -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,6 +36,7 @@
                   ?>
               </div>
             </nav>
+          </div>
 
 
 

@@ -42,13 +42,17 @@ header{
     text-align: center;
 }
 /*nav*/
+
+.navbar-expand-sm .navbar-nav .nav-link{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0 70px;
+}
 .border-menu{
     border-bottom: 1px solid #CCCCCC; 
     border-top: 1px solid #CCCCCC; 
 }
-.menu{
-    display: flex;
-    justify-content: space-around;
+nav{
     width: 70vw;
     margin: auto;
 }
