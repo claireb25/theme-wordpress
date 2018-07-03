@@ -8,7 +8,9 @@ get_header();
 ?>
 <div class="main-a-propos">
     <h2 class="who-are-we">Qui se cache derrière VCB ? </h2>
-<?php the_content();?>
+    <div class="content-a-propos">
+        <?php the_content();?>
+    </div>
 
 
 <?php

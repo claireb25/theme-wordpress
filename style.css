@@ -8,9 +8,14 @@ Tags: blue, orange, light, three-columns, left-sidebar, responsive-layout, edito
 
 
 /*general*/
-
-body{
+html{
+    min-height: 100vh;
     margin: 0;
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -18,35 +23,48 @@ main{
     display: flex;
     width: 70vw;
     margin: auto;
-    position: relative;
+    position:relative
+    
 }
 
 .main-a-propos{
     width: 70vw;
     margin: auto;
-    position: relative;
+    position:relative
+   
 }
 
 .content_home{
     width: 70%;
-   
 }
-
+.content-margin{
+    margin:auto;
+}
 .side {
     position: absolute;
     right: 0;
     width: 25%;
 }
+
+
 /*header*/
 header{
     text-align: center;
+}
+
+.main-logo{
+    width: 50%;
+    height: auto;
 }
 /*nav*/
 
 .navbar-expand-sm .navbar-nav .nav-link{
     padding-top: 0;
     padding-bottom: 0;
-    margin: 0 70px;
+    
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    color: #F7C219;
 }
 .border-menu{
     border-bottom: 1px solid #CCCCCC; 
@@ -56,12 +74,21 @@ nav{
     width: 70vw;
     margin: auto;
 }
-
+.navbar-light .navbar-toggler, .menu-item{
+    color: transparent;
+    border-color: transparent;
+}
 .menu-item{
     text-transform: uppercase;
     height: 10vh;
     list-style: none;
-    
+}
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link{
+    color: #F7C219;
+}
+
+.current_page_item a {
+    color: #F7C219;
 }
 .menu-item a:hover{
     color: #F7C219;
@@ -74,7 +101,10 @@ nav{
     line-height: 10vh;
     
 }
-
+.dropdown-item{
+    width: 400px;
+    padding: .25rem 3rem; 
+}
 /*blog articles*/
 
 .allarticles{
@@ -84,9 +114,7 @@ nav{
 }
 .list_style_none, .post-categories{
     list-style: none;
-    width: 48%;
-    
-    
+    width: 48%; 
 }
 .post-categories li a{
     color: #F7C219;
@@ -103,16 +131,21 @@ nav{
     width: 100%;
     height: auto;
 }
-.article_title{
+.article_title, h4{
     text-transform: uppercase;
     text-align: center;
     margin: 10px 0;
-    padding: 15px;
+    padding: 12px;
+    font-size: 16px;
 }
 .article_author{
     text-align: center;
-    color: #F7C219;
+    color: black;
     margin: 0;
+}
+
+.article_author a {
+    color: #F7C219;
 }
 .titre_last_articles{
     text-align: left;
@@ -162,7 +195,7 @@ nav{
 }
 .single-article-border{
     border: #CCCCCC 1px solid;
-    margin: 0 5px 0 0;
+    margin: 0 20px 0 0;
 }
 .author-meta{
     width: 20vw;
@@ -236,6 +269,11 @@ nav{
 
 .elementor-10 .elementor-element.elementor-element-2d196dc{
     justify-content: center;
+    margin: 50px;
+}
+
+.elementor-widget-container{
+    margin-top: 40px;
 }
 
 .elementor-text-editor, .elementor-clearfix{
@@ -245,7 +283,9 @@ nav{
 form p {
     display: flex;
 }
-
+.wpcf7-form-control {
+    margin-bottom: 4px;
+}
 .wpcf7-validates-as-email, .wpcf7-validates-as-required,.wpcf7-textarea{
     border-bottom: #F7C219 1px solid;
     border-left: none;
@@ -269,6 +309,18 @@ form p {
 }
 input[type="submit"]:hover{
     background-color: transparent;
+}
+.textarea{
+    display: flex;
+    flex-direction: column;
+}
+
+.je-mappelle{
+    justify-content: center;
+    
+}
+.your-name{
+    margin: auto 10px 5px 10px;
 }
 
 /*Sidebar*/
@@ -318,6 +370,8 @@ input[type="submit"]:hover{
 
 .who-are-we{
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
 /* one author*/
@@ -379,21 +433,26 @@ input[type="submit"]:hover{
     border: #CCCCCC 1px solid;
     margin-right: 15px;
     padding: 0 0 20px 0;
+    min-height: 550px;
 }
 
 /* footer */ 
 
-footer p{
+footer{
     background-color: #F7C219;
     color: white;
     text-align: center;
     font-weight: 700;
-    line-height: 10vh;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
-    margin: 10px 0 0 0;
+    margin: 50px 0 0 0;
+    position: absolute;
+    display: flex;
 }
-
+footer p {
+    margin: auto;
+    padding: 0;
+}
 
 /*thumbnail*/
 
@@ -416,4 +475,151 @@ footer p{
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 640px){
+    nav{
+        width:unset;
+        margin: auto;
+    }
+    .navbar-light .navbar-toggler{
+        color: transparent;
+        border-color: transparent;
+    }
+    .row{
+       text-align: left;
+    }
+    .dropdown-item{
+        width: 100%;
+    }
+    .nav-link{
+        margin-left: 15px;
+    }
+    .navbar-toggler-icon{
+        color: #F7C219; 
+    }
+    main, .main-a-propos{
+        flex-direction: column-reverse;
+        width: 100%; 
+    }
+    .side {
+        position: unset;
+        width: 100%;
+    }
+    .content_home{
+        width: 100%;
+    }
+    .allarticles{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .titre_last_articles{
+        margin: 10px
+    }
+    .list_style_none{
+        margin: auto;
+        width: 95%; 
+    }
+    .post-categories{
+        margin: 0 5px;
+        padding: 10px 0 0 0;
+    }
+    .the_excerpt{
+        font-size: 12px;
+        margin: 20px 0 10px 10px;
+    }
+    .en_savoir_plus{
+        font-size: 14px;
+    }
+    .article_title, h4{
+        margin: 0;
+        padding: 10px 0 5px 0;
+    }
+    .article_author a, .the-article {
+        font-size: 12px;
+    }
+    .all_authors{
+        margin: 10px;
+        text-align: left;
+    }
+    .list{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .list li{
+        text-align: left;
+        font-size: 14px;
+    }
+   
+    .description, .stack, .citation{
+        font-size: 13px;
+        width: 90%;
+        margin: auto;
+    }
+    .all-their-articles{
+        flex-direction: column;
+    }
+    .one-article{
+        width: 95%;
+        margin: auto;
+    }
+    .content-article{
+        margin-right: 0;
+        min-height: unset;
+    }
+
+    .single-article-content{
+        flex-direction: column;
+    }
+    .single-article-border{
+        margin-right: 0;
+    }
+    .single-article{
+        width: 95%;
+        margin: auto;
+    }
+    .author-meta{
+        width: 95%;
+        margin: 10px auto;
+    }
+    .thumbnail-perso-single-article{
+        height: 200px;
+    }
+    .other-articles-li{
+        font-size: 13px;
+    }
+    .who-are-we{
+        font-size: 16px;
+        margin: 20px;
+    }
+    .content-a-propos{
+        font-size: 12px;
+        width: 95%;
+        margin: auto;
+    }
+    #grid-contributors{
+        flex-direction: column;
+        flex-wrap: unset;
+    }
+    .je-mappelle{
+        flex-direction: column;
+    }
+    .lable{
+        flex-direction: column;
+    }
+    .elementor-10 .elementor-element.elementor-element-2d196dc{
+        margin: auto;
+        width: 95%;
+    }
+    footer{
+        line-height: unset;
+        display: flex;
+        
+    }
+    footer p{
+        font-size: 12px;
+        margin: auto;
+    }
 }
