@@ -3,9 +3,8 @@ Theme Name: Le Blog des VCB
 Author: Claire Bourgeois
 Description: Proposition de thème pour la promo ACS VCB
 Version: 1.0
-Tags: blue, orange, light, three-columns, left-sidebar, responsive-layout, editor-style, featured-images, full-width-template, sticky-post, theme-options, translation-ready, accessibility-ready
+Tags: yellow, pale gray, black, right-sidebar, responsive-layout, featured-images, full-width-template
 */
-
 
 /*general*/
 html{
@@ -18,52 +17,39 @@ body{
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 main{
     display: flex;
     width: 70vw;
     margin: auto;
     position:relative
-    
 }
-
 .main-a-propos{
     width: 70vw;
     margin: auto;
     position:relative
-   
 }
-
 .content_home{
     width: 70%;
 }
 .content-margin{
     margin:auto;
 }
-.side {
-    position: absolute;
-    right: 0;
-    width: 25%;
-}
-
 
 /*header*/
 header{
     text-align: center;
 }
-
 .main-logo{
     width: 50%;
     height: auto;
 }
-/*nav*/
 
+/*nav*/
 .navbar-expand-sm .navbar-nav .nav-link{
     padding-top: 0;
-    padding-bottom: 0;
-    
+    padding-bottom: 0;  
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover, .menu-item a:hover{
     color: #F7C219;
 }
 .border-menu{
@@ -86,20 +72,11 @@ nav{
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link{
     color: #F7C219;
 }
-
-.current_page_item a {
-    color: #F7C219;
-}
-.menu-item a:hover{
-    color: #F7C219;
-}
-
 .menu-item a {
     text-decoration: none;
     color: black;
     display: block;
     line-height: 10vh;
-    
 }
 .dropdown-item{
     width: 400px;
@@ -117,7 +94,6 @@ nav{
     width: 48%; 
 }
 .post-categories li a{
-    color: #F7C219;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -143,8 +119,7 @@ nav{
     color: black;
     margin: 0;
 }
-
-.article_author a {
+.article_author a, .en_savoir_plus, .post-categories li a {
     color: #F7C219;
 }
 .titre_last_articles{
@@ -154,20 +129,16 @@ nav{
     font-size: 13px;
     margin: 35px 0;
 }
-
 .the_excerpt{
     margin: 30px;
 }
-
 .en_savoir_plus{
-    color: #F7C219;
     text-transform: uppercase;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: right;
     display: block;
     margin-right: 40px;
-
 }
 .derniers_articles{
     width: 100%;
@@ -185,13 +156,11 @@ nav{
 .avatar-default{
     border-radius: 50px;
 }
-
 .single-article-content{
     display: flex;
 }
 .single-article{
-    width: 80%;
-    
+    width: 80%; 
 }
 .single-article-border{
     border: #CCCCCC 1px solid;
@@ -212,9 +181,6 @@ nav{
 .links-author{
     text-align: center;
 }
-
-
-
 .logo{
     width: 30px;
 }
@@ -232,7 +198,6 @@ nav{
     text-transform: uppercase;
     text-align: center;
 }
-
 .other-articles-li{
     list-style: none;
     font-size: 15px;
@@ -251,6 +216,7 @@ nav{
 .post-categories{
     margin: 0 0 10px 0;
 }
+
 /* error 404 */
 
 .error_404{
@@ -261,21 +227,13 @@ nav{
 }
 
 /*form*/
-/* .wpcf7-form{
-    margin-left: 10vw;
-    margin-right: 10vw;
-    width: 60vw;
-} */
-
 .elementor-10 .elementor-element.elementor-element-2d196dc{
     justify-content: center;
     margin: 50px;
 }
-
 .elementor-widget-container{
     margin-top: 40px;
 }
-
 .elementor-text-editor, .elementor-clearfix{
     text-align: center;
     color: black;
@@ -295,7 +253,6 @@ form p {
     resize:none;
     text-align: center;
 }
-
 .wpcf7-submit{
     color: #F7C219;
     background: transparent;
@@ -305,7 +262,6 @@ form p {
     font-weight: 500;
     cursor: pointer;
     margin: auto;
-
 }
 input[type="submit"]:hover{
     background-color: transparent;
@@ -314,16 +270,19 @@ input[type="submit"]:hover{
     display: flex;
     flex-direction: column;
 }
-
 .je-mappelle{
     justify-content: center;
-    
 }
 .your-name{
     margin: auto 10px 5px 10px;
 }
 
 /*Sidebar*/
+.side {
+    position: absolute;
+    right: 0;
+    width: 25%;
+}
 .all_authors{
     text-align: right;
     padding-right: 20px;
@@ -334,7 +293,6 @@ input[type="submit"]:hover{
 .list {
     list-style: none;
 }
-
 .list li {
     border-bottom: #CCCCCC 1px solid;
     padding-top: 10px;
@@ -348,6 +306,7 @@ input[type="submit"]:hover{
     font-weight: 400;
 }
 /* a propos */
+
 #grid-contributors{
     text-align: center;
     display: flex;
@@ -363,11 +322,9 @@ input[type="submit"]:hover{
     list-style: none;
     margin: 20px;
 }
-
 .avatar{
     border-radius: 50%;
 }
-
 .who-are-we{
     text-align: center;
     margin-top: 40px;
@@ -379,7 +336,6 @@ input[type="submit"]:hover{
 #author-info{
     margin-top: 50px;
 }
-
 .avatar-96{
     width: 200px;
     height: auto;
@@ -393,7 +349,6 @@ input[type="submit"]:hover{
     margin-top: 50px;
     font-weight: 800;
 }
-
 .subpart-author{
     text-transform: uppercase;
     font-size: 16px;
@@ -403,7 +358,6 @@ input[type="submit"]:hover{
 .description{
     margin-top: 20px;
 }
-
 .networks{
     text-align: center;
 }
@@ -414,11 +368,9 @@ input[type="submit"]:hover{
     color: #F7C219;
     width: 40px;
 }
-
 .svg-inline--fa{
     margin: 10px;
 }
-
 .all-their-articles{
     width: 100%;
     display: flex;
@@ -428,7 +380,6 @@ input[type="submit"]:hover{
     width: 50%;
     
 }
-
 .content-article{
     border: #CCCCCC 1px solid;
     margin-right: 15px;
@@ -469,7 +420,6 @@ footer p {
     background-repeat: no-repeat;
     /* background-position: center; */
 }
-
 .thumbnail-perso-single-article{
     width: 100%;
     height: 400px;
